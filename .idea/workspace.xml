@@ -51,7 +51,6 @@
       <change afterPath="$PROJECT_DIR$/../module-1-assignment-arraylist/module-1-assignment-arraylist.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../module-1-assignment-arraylist/src/ArrayList.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../module-1-assignment-arraylist/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SinglyLinkedListNode.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../outcomeinsight/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../outcomeinsight/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../outcomeinsight/.idea/modules.xml" afterDir="false" />
@@ -80,6 +79,9 @@
       <change afterPath="$PROJECT_DIR$/../xerotoolmaven/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../xerotoolmaven/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../xerotoolmaven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module-2-assignment-SLL/SinglyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module-2-assignment-SLL/SinglyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../tree-map.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,5 +148,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SinglyLinkedList.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/module_2_assignment_SLL$SinglyLinkedList.ic" NAME="SinglyLinkedList Coverage Results" MODIFIED="1675637288731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -30,8 +30,14 @@ public class SinglyLinkedList<T> {
             throw new IllegalArgumentException();
         }
         SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
-        newNode.setNext(this.head);
-        this.head = newNode;
+        if (this.head == null){
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            newNode.setNext(this.head);
+            this.head = newNode;
+        }
+        this.size++;
     }
 
     /**
@@ -44,6 +50,19 @@ public class SinglyLinkedList<T> {
      */
     public void addToBack(T data) {
         // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
+        if (data == null){
+            throw new IllegalArgumentException();
+        }
+        SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+        SinglyLinkedListNode<T> curr = this.head;
+        if (curr == null){
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.setNext(newNode);
+            this.tail = newNode;
+        }
+        this.size++;
     }
 
     /**
@@ -61,8 +80,14 @@ public class SinglyLinkedList<T> {
         }
         SinglyLinkedListNode<T> current = this.head;
         T recoveredData = current.getData();
-        this.head = current.getNext();
-        current.setNext(null);
+        if (current.getNext() == null){
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = current.getNext();
+            current.setNext(null);
+        }
+        this.size--;
         return recoveredData;
     }
 
@@ -80,11 +105,21 @@ public class SinglyLinkedList<T> {
             throw new NoSuchElementException();
         }
         SinglyLinkedListNode<T> current = this.head;
-        while (current.getNext().getNext() != null){
-            current = current.getNext();
+        T recoveredData;
+        if (current.getNext() == null){
+            recoveredData = current.getData();
+            this.head = null;
+            this.tail = null;
+
+        } else {
+            while (current.getNext().getNext() != null){
+                current = current.getNext();
+            }
+            recoveredData = current.getNext().getData();
+            current.setNext(null);
+            this.tail = current;
         }
-        T recoveredData = current.getData();
-        current.setNext(null);
+        this.size--;
         return recoveredData;
     }
 
@@ -127,16 +162,18 @@ public class SinglyLinkedList<T> {
         return size;
     }
 
-    public static void main(String[] args) {
-        SinglyLinkedList<String> names = new SinglyLinkedList<>();
-        names.addToFront("Scott");
-        names.addToFront("Gatsby");
-        names.addToFront("Kayla");
-        names.addToFront("Mom");
-        names.addToFront("Dad");
-        names.addToFront("Janelle");
-        System.out.println(names.removeFromBack());
-        System.out.println(names.removeFromFront());
-
-    }
+//    public static void main(String[] args) {
+//        SinglyLinkedList<String> names = new SinglyLinkedList<>();
+//        names.addToFront("Scott");
+//        names.addToBack("Gatsby");
+//        names.addToBack("Kayla");
+////        names.addToFront("Mom");
+////        names.addToFront("Dad");
+////        names.addToFront("Janelle");
+//        System.out.println(names.removeFromBack());
+//        System.out.println(names.removeFromFront());
+////        names.addToBack("Ben");
+//
+//
+//    }
 }
